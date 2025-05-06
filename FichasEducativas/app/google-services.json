@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "256778456206",
+    "firebase_url": "https://catedradsm-73669-default-rtdb.firebaseio.com",
+    "project_id": "catedradsm-73669",
+    "storage_bucket": "catedradsm-73669.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256778456206:android:440fd3294323b153b40ddf",
+        "android_client_info": {
+          "package_name": "sv.edu.udb.fichaseducativas.HT192210.MU192557.RH190164.CT142074"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUgMKjJtqCnAQ0fCWl8ML2EtvKXC4Vgfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
