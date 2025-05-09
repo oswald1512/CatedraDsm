@@ -122,8 +122,11 @@ class TematicasActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_sign_out -> {
-                auth.signOut()
+                com.google.firebase.auth.FirebaseAuth.getInstance().signOut()
                 Toast.makeText(this, "Sesión cerrada", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
                 finish()
                 true
             }

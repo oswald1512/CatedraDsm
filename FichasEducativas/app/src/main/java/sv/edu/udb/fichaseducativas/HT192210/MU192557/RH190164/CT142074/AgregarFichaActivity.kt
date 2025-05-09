@@ -5,6 +5,7 @@ import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -18,6 +19,7 @@ import androidx.core.content.ContextCompat
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.database.FirebaseDatabase
 import com.squareup.picasso.Picasso
+import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 
 class AgregarFichaActivity : AppCompatActivity() {
@@ -49,10 +51,14 @@ class AgregarFichaActivity : AppCompatActivity() {
             etRespuesta.setText(intent.getStringExtra("respuesta") ?: "")
             imagenUrl = intent.getStringExtra("imagen") ?: ""
             if (imagenUrl.isNotEmpty()) {
-                ivPreview.visibility = ImageView.VISIBLE
-                Picasso.get()
-                    .load(imagenUrl)
-                    .into(ivPreview)
+                try {
+                    val decodedString = Base64.decode(imagenUrl, Base64.DEFAULT)
+                    val bitmap = BitmapFactory.decodeStream(ByteArrayInputStream(decodedString))
+                    ivPreview.setImageBitmap(bitmap)
+                    ivPreview.visibility = ImageView.VISIBLE
+                } catch (e: Exception) {
+                    ivPreview.visibility = ImageView.GONE
+                }
             }
             btnAgregar.text = "Actualizar"
         }
