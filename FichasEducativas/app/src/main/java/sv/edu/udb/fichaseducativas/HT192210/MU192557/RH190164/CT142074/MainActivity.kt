@@ -17,6 +17,10 @@ class MainActivity : AppCompatActivity() {
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+
+        // Redirigir a TematicasActivity
+        startActivity(Intent(this, TematicasActivity::class.java))
+        finish() // Cerrar MainActivity para que no quede en el stack
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

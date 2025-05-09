@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imgFondo"
+        android:layout_width="413dp"
+        android:layout_height="294dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo"
+        android:alpha="0.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="161dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="52dp"
+        android:contentDescription="Logo"
+        android:src="@drawable/tematicas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardAgregarTematica"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="459dp"
+            android:orientation="vertical"
+            android:padding="26dp"
+            android:background="@drawable/border_linear">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="16dp"
+                android:text="Agregar nueva temática"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Título de la nueva temática">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNombreTematica"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Descripción">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDescripcionTematica"
+                    android:layout_width="match_parent"
+                    android:layout_height="104dp"
+                    android:inputType="textMultiLine"
+                    android:minLines="2" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnAgregarTematica"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="@color/teal_200"
+                android:text="Agregar"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:id="@+id/backgroundWhite2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@android:color/white" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

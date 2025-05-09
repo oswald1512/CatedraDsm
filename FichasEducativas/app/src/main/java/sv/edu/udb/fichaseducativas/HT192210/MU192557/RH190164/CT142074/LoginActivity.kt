@@ -8,6 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import sv.edu.udb.fichaseducativas.HT192210.MU192557.RH190164.CT142074.R
 
 class LoginActivity : AppCompatActivity() {
 

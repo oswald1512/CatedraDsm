@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -28,6 +32,23 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+
+        <activity
+            android:name=".TematicasActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".FichasActivity"
+            android:exported="false" />
+
+        <activity android:name=".AgregarTematicaActivity"
+            android:exported="false" />
+        <activity android:name=".AgregarFichaActivity"
+            android:exported="false" />
+        <activity 
+            android:name="sv.edu.udb.fichaseducativas.HT192210.MU192557.RH190164.CT142074.TarjetaEstudioActivity"
+            android:exported="false"
+            android:label="Tarjeta de Estudio" />
     </application>
 
 </manifest>
